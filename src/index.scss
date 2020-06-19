@@ -1,0 +1,129 @@
+$hover-color: #f5f5f5;
+
+h1 {
+    margin: 0;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 400;
+    align-self: center;
+    margin-left: 2rem;
+}
+
+h2 {
+    margin: 0;
+    display: block;
+    font-size: 1.17em;
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    min-width: 500px;
+    max-width: 400px;
+}
+
+.section {
+    margin: 1em;
+    height: 5em;
+
+    border: 2px solid rgba($hover-color, 1);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.github {
+    flex: 0 0 3em;
+
+    background-size: 1.6em;
+    background-image: url('images/github.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.link {
+    flex: 1 1 auto;
+    cursor: pointer;
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    padding: 0 1em 0 1em;
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.image {
+    flex: 0 0 auto;
+    width: 5em;
+    height: 5em;
+    margin: 0 1em 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#secret-hitler-image {
+    filter: drop-shadow(0 0 5px gray);
+    -webkit-filter: drop-shadow(0 0 5px gray);
+    background-image: url("images/secret-hitler.svg");
+}
+
+#tetris-image {
+    background-size: 80%;
+    background-image: url("images/tetris.png");
+}
+
+#tetris-p2p-image {
+    background-size: 80%;
+    background-image: url("images/tetris.png");
+}
+
+#snake-image {
+    background-image: url("images/snake.png");
+}
+
+#snake-p2p-image {
+    background-image: url("images/snake.png");
+}
+
+#schedule-image {
+    background-size: 80%;
+    background-image: url("images/schedule.svg");
+}
+
+#diplomacy-image {
+    image-rendering: pixelated;
+    background-size: 72px;
+    background-image: url("images/diplomacy.png");
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        max-width: 100%;
+        box-shadow: none;
+        margin: 0;
+    }
+}
